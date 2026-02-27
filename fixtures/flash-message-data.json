@@ -1,0 +1,18 @@
+{
+    "successLogin": {
+        "alertType": "success",
+        "alertMessage": "You logged into a secure area!"
+    },
+    "successLogout": {
+        "alertType": "success",
+        "alertMessage": "You logged out of the secure area!"
+    },
+    "invalidUsername": {
+        "alertType": "error",
+        "alertMessage": "Your username is invalid!"
+    },
+    "invalidPassword": {
+        "alertType": "error",
+        "alertMessage": "Your password is invalid!"
+    }
+}
