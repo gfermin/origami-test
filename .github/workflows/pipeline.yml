@@ -24,7 +24,7 @@ jobs:
 
       - run: npx playwright install --with-deps
 
-      - name: run playwright tests
+      - name: run playwright test
         run: npx playwright tests --shard=${{ matrix.shard }}/4
 
       - name: Upload report
