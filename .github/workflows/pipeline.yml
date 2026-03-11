@@ -2,7 +2,7 @@ name: Origami Test Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [validation-branch]
   pull_request:
 
 jobs:
