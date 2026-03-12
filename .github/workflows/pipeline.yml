@@ -61,35 +61,3 @@ jobs:
         with:
           name: playwright-report-${{ matrix.shard }}
           path: playwright-report
-
-  merge-reports:
-    needs: test
-    runs-on: ubuntu-latest
-    if: always()
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Download all reports
-        uses: actions/download-artifact@v4
-        with:
-          path: all-reports
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Merge Playwright reports
-        run: |
-          npx playwright merge-reports --reporter html ./playwright-report
-
-      - name: Upload merged report
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-merged
-          path: playwright-report
